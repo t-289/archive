@@ -8,7 +8,7 @@ import (
 	"os"
 )
 
-func openFile(filePath string) *os.File {
+func opFile(filePath string) *os.File {
 	f, err := os.Open(filePath)
 
 	if err != nil {
@@ -19,7 +19,7 @@ func openFile(filePath string) *os.File {
 }
 
 func HashFile(filePath string) hash.Hash {
-	obj := openFile(filePath)
+	obj := opFile(filePath)
 	cryp := sha256.New()
 	if _, err := io.Copy(cryp, obj); err != nil {
 		log.Fatal("Hash Error: ", err)
