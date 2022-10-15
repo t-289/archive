@@ -5,8 +5,8 @@ import (
 )
 
 func main() {
-	ghs := hashfile.hashFile("README.md")
-	ghs2 := hashfile.hashFile("/home/tiago/README.md")
+	ghs := hsfile.hashFile("README.md")
+	ghs2 := hsfile.hashFile("/home/tiago/README.md")
 
 	fmt.Printf("Hash: %x \n", ghs.Sum(nil))
 	fmt.Printf("Hash: %x \n", ghs2.Sum(nil))
