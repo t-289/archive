@@ -3,12 +3,13 @@ A little project to manage files
 
 
 ## Steps
-- Create a hash of a file
-- Check if the hash already exists, if yes: skip to next file | no: follow the next step
-- Get file [metadata](#metadata)
-- Save data in database
-- Move file to destination folder 
-- Go to the next file
+- [x] Create a hash of a file
+- [ ] Check if the hash already exists, if yes: skip to next file | no: follow the next step
+    - [ ] SQL stuff
+- [ ] Get file [metadata](#metadata)
+- [ ] Save data in database
+- [ ] Move file to destination folder 
+- [ ] Go to the next file
 
 
 ## Metadata
