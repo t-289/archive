@@ -18,7 +18,7 @@ func openFile(filePath string) *os.File {
 	return f
 }
 
-func hashFile(filePath string) hash.Hash {
+func HashFile(filePath string) hash.Hash {
 	obj := openFile(filePath)
 	cryp := sha256.New()
 	if _, err := io.Copy(cryp, obj); err != nil {
