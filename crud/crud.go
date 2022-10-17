@@ -41,7 +41,7 @@ func DBSelect(queryString string) (*sql.Rows, error) {
 	return selectDB, err
 }
 
-func DBInsert(queryString string) {
+func DBInsert(queryString string) *sql.Rows {
 	db, err := dbConn()
 
 	if err != nil {
@@ -56,7 +56,7 @@ func DBInsert(queryString string) {
 
 	defer db.Close()
 
-	fmt.Printf("Insert response: %v", insertDB)
+	return insertDB
 }
 
 func DBDelete(queryString string) (int64, error) {
